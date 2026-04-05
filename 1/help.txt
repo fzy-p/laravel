@@ -1,0 +1,40 @@
+\\ MIGRATE
+
+saat migrate, cek .env pastikan 
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=produk
+DB_USERNAME=unix
+DB_PASSWORD=aaaa
+sama di mysql,kalau eror coba jalankan
+
+GRANT ALL PRIVILEGES ON isi_database.* TO 'user'@'localhost';
+FLUSH PRIVILEGES; 
+
+\\ USER
+
+CREATE USER 'nama_kamu'@'localhost' IDENTIFIED BY 'password_kamu';
+
+kasih akses
+
+GRANT ALL PRIVILEGES ON databasee.* TO 'user'@'localhost';
+
+terapin perubahan
+
+FLUSH PRIVILEGES;
+
+cek kalo masih ragu
+
+SELECT User, Host FROM mysql.user;
+
+\\ BUAT TAMPILAN
+
+lokasi di resources/views/
+
+contoh resources/views/home.blade.php
+
+isi sederhana ada di contoh.php
+atau lebih nyatu ke database
+
+tambahkan route contoh ada di web.php
